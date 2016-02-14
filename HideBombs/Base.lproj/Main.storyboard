@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10109" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HideBombs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8W-hZ-XDy">
+                                <rect key="frame" x="72" y="269" width="176" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="SRg-0d-KtF"/>
+                                </constraints>
+                                <state key="normal" title="Hide Blue Bomb"/>
+                                <connections>
+                                    <action selector="hideBlueBomb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yGW-et-bIy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUc-sl-zTa">
+                                <rect key="frame" x="100" y="307" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="mOe-tK-IVK"/>
+                                </constraints>
+                                <state key="normal" title="Hide Red Bomb">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.030793504433242802" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideRedBomb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AQP-Go-iw3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue Bomb" translatesAutoresizingMaskIntoConstraints="NO" id="bVD-Bx-hfZ">
+                                <rect key="frame" x="8" y="55" width="142" height="125"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Red Bomb" translatesAutoresizingMaskIntoConstraints="NO" id="cWh-Zk-COJ">
+                                <rect key="frame" x="164" y="55" width="141" height="125"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G8W-hZ-XDy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="11P-26-mn1"/>
+                            <constraint firstItem="G8W-hZ-XDy" firstAttribute="centerX" secondItem="vUc-sl-zTa" secondAttribute="centerX" id="E9t-f9-dw9"/>
+                            <constraint firstItem="vUc-sl-zTa" firstAttribute="top" secondItem="G8W-hZ-XDy" secondAttribute="bottom" constant="8" symbolic="YES" id="Hi1-Pv-Gm8"/>
+                            <constraint firstItem="G8W-hZ-XDy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rhl-oi-dVr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blueBombButton" destination="G8W-hZ-XDy" id="C4C-FU-iQk"/>
+                        <outlet property="blueBombImage" destination="bVD-Bx-hfZ" id="343-9g-kfA"/>
+                        <outlet property="redBombButton" destination="vUc-sl-zTa" id="JNb-1H-c8q"/>
+                        <outlet property="redBombImage" destination="cWh-Zk-COJ" id="hqq-rC-4vS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="331"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Blue Bomb" width="256" height="256"/>
+        <image name="Red Bomb" width="318" height="377"/>
+    </resources>
+</document>
